@@ -23,7 +23,7 @@ function App() {
     }
 
     fetchPokemons()
-  }, [])
+  }, [dispatch])
 
   return (
     <div className="App">
