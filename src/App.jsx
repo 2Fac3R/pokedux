@@ -1,5 +1,9 @@
-import { useEffect, useState } from 'react'
+/* eslint-disable react/prop-types */
+import { useEffect } from 'react'
+import { connect } from 'react-redux'
+
 import { getPokemons } from './api'
+import { setPokemons as setPokemonsActions } from './actions'
 
 import { Col } from 'antd'
 import Searcher from './Components/Searcher'
@@ -8,9 +12,7 @@ import PokemonList from './Components/PokemonList'
 import logo from './assets/logo.svg'
 import './App.css'
 
-function App() {
-  const [pokemons, setPokemons] = useState([])
-
+function App({ pokemons, setPokemons }) {
   useEffect(() => {
     const fetchPokemons = async () => {
       const res = await getPokemons()
@@ -36,4 +38,13 @@ function App() {
   )
 }
 
-export default App
+const mapStateToProps = (state) => ({
+  pokemons: state.pokemons,
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  setPokemons: (value) => dispatch(setPokemonsActions(value)),
+})
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
