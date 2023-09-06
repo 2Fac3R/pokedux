@@ -12,4 +12,14 @@ async function getPokemons() {
   }
 }
 
-export { getPokemons }
+async function getPokemonDetails(pokemon) {
+  try {
+    const { data } = await axios.get(pokemon.url);
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error('There was an error: ', error);
+  }
+}
+
+export { getPokemons, getPokemonDetails }
