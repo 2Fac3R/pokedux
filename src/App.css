@@ -1,7 +1,26 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  margin-top: 3rem;
+  margin-top: 2rem;
+}
+
+.App .Searcher {
+  margin-bottom: 18px;
 }
 
 .App img {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+.App .loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -2,7 +2,9 @@ import { Input } from 'antd'
 
 function Searcher() {
   return (
-    <Input.Search placeholder='Buscar...' />
+    <div className='Searcher'>
+      <Input.Search placeholder='Buscar...' />
+    </div>
   )
 }
 

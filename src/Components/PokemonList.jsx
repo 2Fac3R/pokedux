@@ -2,14 +2,31 @@
 import PokemonCard from "./PokemonCard"
 import './PokemonList.css'
 
+
+function getPokemonTypes(pokemon) {
+  const types = pokemon.types.map((type) => (type))
+
+  return types.map((type) => type.type)
+}
+
+function getPokemonAbilities(pokemon) {
+  const abilities = pokemon.abilities.map((ability) => (ability))
+
+  return abilities.map((ability) => ability.ability)
+}
+
 function PokemonList({ pokemons }) {
   return (
     <div className="PokemonList">
       {pokemons.map((pokemon) => {
         return <PokemonCard
-          key={pokemon.name}
+          key={pokemon.id}
+          id={pokemon.id}
           name={pokemon.name}
-          image={pokemon.sprites.front_default}
+          sprites={pokemon.sprites}
+          types={getPokemonTypes(pokemon)}
+          abilities={getPokemonAbilities(pokemon)}
+          favorite={pokemon.favorite}
         />
       })}
     </div>
