@@ -1,8 +1,14 @@
-# React + Vite
+# Pokedux
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a typical example of a 'Pokedex' app, developed using React + [AntDesign](https://ant.design/). Redux is employed for state management within the application, and axios is utilized to connect to the Pokemon API.
 
-Currently, two official plugins are available:
+# Usage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clone the project and install dependencies
+
+```bash
+npm install
+npm run dev
+```
+
+Go to the server -> http://localhost:5173/
