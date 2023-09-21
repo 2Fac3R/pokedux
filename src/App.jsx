@@ -6,7 +6,7 @@ import { getPokemons, getPokemonDetails } from './api'
 import { setLoading, setPokemons } from './actions'
 
 import { Col, Spin } from 'antd'
-import Searcher from './Components/Searcher'
+// import Searcher from './Components/Searcher'
 import PokemonList from './Components/PokemonList'
 
 import logo from './assets/logo.svg'
@@ -38,7 +38,7 @@ function App() {
         span={8}
         offset={8}
       >
-        <Searcher />
+        {/* <Searcher /> */}
       </Col>
       {loading ? (
         <Col className='loading'>
