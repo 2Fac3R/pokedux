@@ -7,7 +7,7 @@ import { setLoading, setPokemons } from './actions'
 
 import { Col, Spin } from 'antd'
 // import Searcher from './Components/Searcher'
-import PokemonList from './Components/PokemonList'
+import PokemonList from './components/PokemonList'
 
 import logo from './assets/logo.svg'
 import './App.css'
